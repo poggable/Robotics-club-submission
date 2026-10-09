@@ -1,2 +1,4 @@
 # Robotics-club-submission
 by the way, i was trying to export some data to a .txt file to try to use it to create a visualisation in python, but i ended up not doing it, so some code seen on the video is deleted in the file here, AND also i did use diagonal movement too im not sure if thats allowed but it wasnt specified, if not the logic is still basically the same with different movement methods and neighbours and stuff
+and last thing, i did also add a little bit of code that doesnt let the executable immediately terminate after its done
+
