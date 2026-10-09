@@ -5,6 +5,7 @@
 #include <list>
 #include <stack>
 #include <algorithm>
+#include <limits>
 
 using namespace std;
 
@@ -144,5 +145,8 @@ int main(){
 } else {
     cout << "Cannot reach cube.\n";
 }
+    cout << "Press Enter to exit...";
+cin.ignore(numeric_limits<streamsize>::max(), '\n');
+cin.get();
 return 0;
 }
