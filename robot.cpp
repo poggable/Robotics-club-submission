@@ -83,9 +83,9 @@ bool bfs(robot& bot, vector<int> target){
     return true;
 }       /*searching, the program goes into this if the current cell is not the target,
           and it keeps looking for it until it finds it using bfs, then once it is found
-          it runs the code above to find the route and move the robot accordingly*/ 
+          it runs the code above to find the route and moves the robot accordingly*/ 
 
-        // creating the list of neighbours of each current_cell
+        // creating the list of neighbours of each current_cell (i assumed diagonal movement so it is 8)
         vector<vector<int>> neighbours = {
     {current_cell[0] + 1, current_cell[1]},     
     {current_cell[0] - 1, current_cell[1]},     
@@ -112,7 +112,7 @@ bool bfs(robot& bot, vector<int> target){
     
 int main(){
     robot robot1(0, 0); // making the robot object
-    /*below im creating the obstacles, to equal 1, so that the check above for
+    /*below im taking the obstacles as input, then setting them to equal 1, so that the check above for
      whether it is occupied can just check if the cell != 0 */
     vector<int> firstobstacle(2);
     vector<int> secondobstacle(2);
@@ -131,7 +131,7 @@ int main(){
     matrix[firstobstacle[0]][firstobstacle[1]] = 1; 
     matrix[secondobstacle[0]][secondobstacle[1]] = 1;
     matrix[thirdobstacle[0]][thirdobstacle[1]] = 1;
-    /*and here we use the function twice, to reach the cube,then to deliver it, and give some comments, 
+    /*and underneath here we use the function twice, to reach the cube,then to deliver it, and give some comments, 
     most importantly when it cannot reach the cube at (2,2), or the destination at (4,4)*/
     if (bfs(robot1, {2, 2})) {
     robot1.has_cube = true;
